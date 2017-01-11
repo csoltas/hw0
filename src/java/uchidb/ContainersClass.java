@@ -13,12 +13,18 @@ public class ContainersClass<T, S> implements Containers<T, S>
 	private Map<S,T> contmap;
 
 	public Set<T> initSet(T[] tArray) {
-		Set<T> set = new HashSet<T>(tArray);
+		Set<T> set = new HashSet<T>(tArray.length);
+		for (int i = 0; i < tArray.length; i++) {
+			set.add(tArray[i]);
+		}
 		return set;
 	}
 	
 	public List<T> initList(T[] tArray) {
-		List<T> list = new ArrayList<T>(tArray);
+		List<T> list = new ArrayList<T>(tArray.length);
+		for (int i = 0; i < tArray.length; i++) {
+			list.add(tArray[i]);
+		}
 		return list;
 	}
 
